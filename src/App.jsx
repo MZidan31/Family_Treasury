@@ -7,6 +7,7 @@ import getCroppedImg from './utils/cropImage';
 
 import Dashboard from './pages/Dashboard';
 import Kitchen from './pages/Kitchen';
+import Analytics from './pages/Analytics';
 import Transactions from './pages/Transactions';
 import Auth from './pages/Auth';
 import BottomNav from './components/BottomNav';
@@ -173,6 +174,7 @@ const App = () => {
               <Route path="/kitchen" element={session ? <Kitchen /> : <Navigate to="/auth" />} />
               <Route path="/transactions" element={session ? <Transactions /> : <Navigate to="/auth" />} />
               <Route path="*" element={<Navigate to="/" />} />
+              <Route path="/analytics" element={<Analytics session={session} />} />
             </Routes>
           </main>
 
